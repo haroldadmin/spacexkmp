@@ -1,36 +1,36 @@
-package com.haroldadmin.spacexkmp.landingpad
+package com.haroldadmin.spacexkmp.launchpads
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-public enum class LandingPadStatus {
+public enum class LaunchpadStatus {
     active,
     inactive,
     unknown,
-    lost,
     retired,
+    lost,
+
     @SerialName("under construction")
     underConstruction
 }
 
 @Serializable
-public data class LandingPad(
+public data class Launchpad(
     val id: String,
     val name: String?,
     @SerialName("full_name")
     val fullName: String?,
-    val status: LandingPadStatus,
-    val type: String?,
+    val status: LaunchpadStatus,
     val locality: String?,
     val region: String?,
+    val timezone: String?,
     val latitude: Double?,
     val longitude: Double?,
-    @SerialName("landing_attempts")
-    val landingAttempts: Int,
-    @SerialName("landing_successes")
-    val landingSuccesses: Int,
-    val wikipedia: String?,
-    val details: String?,
+    @SerialName("launch_attempts")
+    val launchAttempts: Int,
+    @SerialName("launch_successes")
+    val launchSuccesses: Int,
+    val rockets: List<String>?,
     val launches: List<String>?
 )
