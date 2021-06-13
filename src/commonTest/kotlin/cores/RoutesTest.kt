@@ -3,7 +3,6 @@ package com.haroldadmin.spacexkmp.cores
 import com.haroldadmin.spacexkmp.SuccessHandler
 import com.haroldadmin.spacexkmp.createMockClient
 import kotlinx.coroutines.runBlocking
-import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.serializer
 import kotlin.test.Test

@@ -1,19 +1,19 @@
-package com.haroldadmin.spacexkmp.crew
+package com.haroldadmin.spacexkmp.landingpad
 
 import com.haroldadmin.spacexkmp.Http
 import io.ktor.client.*
 import io.ktor.client.request.*
 
-public class CrewRoutes(
+public class LandingPadRoutes(
     private val client: HttpClient = Http.client,
-    private val url: String = "${Http.baseUrl}/crew"
+    private val url: String = "${Http.baseUrl}/landpads"
 ) {
-    public suspend fun getOne(id: String): Crew {
+    public suspend fun getOne(id: String): LandingPad {
         val url = "$url/$id"
         return client.get(url)
     }
 
-    public suspend fun getAll(): List<Crew> {
+    public suspend fun getAll(): List<LandingPad> {
         return client.get(url)
     }
 }

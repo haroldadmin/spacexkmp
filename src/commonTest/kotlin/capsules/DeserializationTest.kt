@@ -11,7 +11,7 @@ class DeserializationTest {
         val expected = Capsule(
             id = "5e9e2c5bf35918ed873b2664",
             type = DragonType.Dragon1,
-            status = CapsuleStatus.Retired,
+            status = CapsuleStatus.retired,
             serial = "C101",
             launches = listOf("5eb87cdeffd86e000604b330"),
             lastUpdate = "Reentered after three weeks in orbit",

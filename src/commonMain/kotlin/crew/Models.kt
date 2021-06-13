@@ -8,6 +8,7 @@ public enum class CrewStatus {
 
 @Serializable
 public data class Crew(
+    val id: String,
     val name: String?,
     val status: CrewStatus,
     val agency: String?,
