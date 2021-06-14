@@ -38,10 +38,9 @@ kotlin {
     sourceSets {
         val commonMain by getting {
             dependencies {
+                api("io.ktor:ktor-client-core:$ktorVersion")
+                api("io.ktor:ktor-client-cio:$ktorVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1")
-
-                implementation("io.ktor:ktor-client-core:$ktorVersion")
-                implementation("io.ktor:ktor-client-cio:$ktorVersion")
                 implementation("io.ktor:ktor-client-serialization:$ktorVersion")
             }
         }
@@ -50,6 +49,8 @@ kotlin {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
                 implementation("io.ktor:ktor-client-mock:$ktorVersion")
+                implementation("ch.qos.logback:logback-classic:1.2.3")
+                implementation("io.ktor:ktor-client-logging:$ktorVersion")
             }
         }
         val jvmMain by getting

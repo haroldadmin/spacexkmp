@@ -32,7 +32,7 @@ val FakeLaunchResponse = """
         },
         "static_fire_date_utc": "2020-03-01T10:20:00.000Z",
         "static_fire_date_unix": 1583058000,
-        "tdb": false,
+        "tbd": false,
         "net": false,
         "window": 0,
         "rocket": "5e9d0d95eda69973a809d1ec",
@@ -69,7 +69,8 @@ val FakeLaunchResponse = """
                 "landpad": "5e9e3032383ecb267a34e7c7"
             }
         ],
-        "id": "5eb87d42ffd86e000604b384"
+        "id": "5eb87d42ffd86e000604b384",
+        "launch_library_id": null
     }
 """.trimIndent()
 
@@ -106,7 +107,7 @@ val FakeLaunchesResponse = """
             },
             "static_fire_date_utc": "2020-03-01T10:20:00.000Z",
             "static_fire_date_unix": 1583058000,
-            "tdb": false,
+            "tbd": false,
             "net": false,
             "window": 0,
             "rocket": "5e9d0d95eda69973a809d1ec",
@@ -143,7 +144,8 @@ val FakeLaunchesResponse = """
                     "landpad": "5e9e3032383ecb267a34e7c7"
                 }
             ],
-            "id": "5eb87d42ffd86e000604b384"
+            "id": "5eb87d42ffd86e000604b384",
+            "launch_library_id": null
         }
     ]
 """.trimIndent()

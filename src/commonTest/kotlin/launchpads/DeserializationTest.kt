@@ -37,7 +37,8 @@ class DeserializationTest {
                 "5eb87d31ffd86e000604b379"
             ),
             status = LaunchpadStatus.active,
-            id = "5e9e4502f509092b78566f87"
+            id = "5e9e4502f509092b78566f87",
+            details = "SpaceX's primary west coast launch pad for polar orbits and sun-synchronous orbits, primarily used for Iridium NEXT and scientific satellite launches. The pad was used for the debut of Falcon 9 v1.1 in the rocket's first ever non-dragon mission, CASSIOPE, in September 2013. It is SpaceX's only remaining pad with the old-style transporter/erector, which reclines prior to launch instead of using a throwback procedure. It is also capable of launching Falcon Heavy (although some pad modifications would be needed, but no west coast Falcon Heavy missions are currently planned)."
         )
         val decoded = Json.decodeFromString(Launchpad.serializer(), json)
         assertEquals(expected, decoded)

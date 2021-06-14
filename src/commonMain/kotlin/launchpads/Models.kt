@@ -32,5 +32,6 @@ public data class Launchpad(
     @SerialName("launch_successes")
     val launchSuccesses: Int,
     val rockets: List<String>?,
-    val launches: List<String>?
+    val launches: List<String>?,
+    val details: String?
 )

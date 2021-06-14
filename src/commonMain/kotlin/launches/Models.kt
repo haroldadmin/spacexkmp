@@ -17,6 +17,7 @@ public data class Failure(
 @Serializable
 public data class Fairings(
     val reused: Boolean?,
+    @SerialName("recovery_attempt")
     val recoveryAttempt: Boolean?,
     val recovered: Boolean?,
     val ships: List<String>
@@ -89,7 +90,7 @@ public data class Launch(
     val staticFireDateUtc: String?,
     @SerialName("static_fire_date_unix")
     val staticFireDateUnix: Long?,
-    val tdb: Boolean,
+    val tbd: Boolean,
     val net: Boolean,
     val window: Long?,
     val rocket: String?,
@@ -106,5 +107,7 @@ public data class Launch(
     val cores: List<Core>?,
     val links: LaunchLinks?,
     @SerialName("auto_update")
-    val autoUpdate: Boolean
+    val autoUpdate: Boolean,
+    @SerialName("launch_library_id")
+    val launchLibraryId: String?
 )

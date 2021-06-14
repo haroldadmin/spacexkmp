@@ -40,7 +40,7 @@ class DeserializationTest {
             ),
             staticFireDateUtc = "2020-03-01T10:20:00.000Z",
             staticFireDateUnix = 1583058000,
-            tdb = false,
+            tbd = false,
             net = false,
             window = 0,
             rocket = "5e9d0d95eda69973a809d1ec",
@@ -73,7 +73,8 @@ class DeserializationTest {
                     landpad = "5e9e3032383ecb267a34e7c7"
                 )
             ),
-            id = "5eb87d42ffd86e000604b384"
+            id = "5eb87d42ffd86e000604b384",
+            launchLibraryId = null
         )
         val decoded = Json.decodeFromString(Launch.serializer(), json)
         assertEquals(expected, decoded)
